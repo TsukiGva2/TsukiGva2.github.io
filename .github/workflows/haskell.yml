@@ -42,6 +42,4 @@ jobs:
     - name: Run tests
       run: cabal test all
     - name: Make webpage
-      run: |
-        cabal run exes -- portfolio/portfolio.md
-        cp portfolio/portfolio.html index.html
+      run: cabal run exes -- portfolio/portfolio.md
