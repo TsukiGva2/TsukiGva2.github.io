@@ -44,8 +44,8 @@ jobs:
       run: cabal test all
     - name: Make webpage
       run: cabal run exes -- ${{ inputs.file-path }}
-    - name: Archive code coverage results
+    - name: 'Upload Artifact'
       uses: actions/upload-artifact@v4
       with:
-        name: Saving webpage
-        path: webpage.html
+        name: out-cmark
+        path: out-cmark
