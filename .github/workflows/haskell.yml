@@ -43,4 +43,4 @@ jobs:
     - name: Run tests
       run: cabal test all
     - name: Make webpage
-      run: cabal run exes -- inputs.file-path
+      run: cabal run exes -- ${{ inputs.file-path }}
