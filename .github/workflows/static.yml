@@ -41,11 +41,11 @@ jobs:
       - name: Download a single artifact
         uses: actions/download-artifact@v4
         with:
-          name: portfolio.html
+          name: out-cmark
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'portfolio.html'
+          path: 'out-cmark/portfolio/portfolio.html'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
