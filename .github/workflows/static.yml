@@ -22,8 +22,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  build:
+    uses: TsukiGva2/TsukiGva2.github.io/.github/workflows/haskell.yml@main
   # Single deploy job since we're just deploying
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
