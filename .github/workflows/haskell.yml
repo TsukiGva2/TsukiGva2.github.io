@@ -39,10 +39,13 @@ jobs:
         cabal update
         cabal build --only-dependencies --enable-tests --enable-benchmarks
     - name: Build
-      run: |
-        pwd
-        cabal build --enable-tests --enable-benchmarks all
+      run: cabal build --enable-tests --enable-benchmarks all
     - name: Run tests
       run: cabal test all
     - name: Make webpage
       run: cabal run exes -- ${{ inputs.file-path }}
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v4
+      with:
+        name: Saving webpage
+        path: webpage.html
