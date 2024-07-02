@@ -1,13 +1,14 @@
 name: Haskell CI
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
 permissions:
   contents: read
+
+on:
+  workflow_call:
+    inputs:
+      file-path:
+        required: true
+        type: string
 
 jobs:
   build:
@@ -42,4 +43,4 @@ jobs:
     - name: Run tests
       run: cabal test all
     - name: Make webpage
-      run: cabal run exes -- portfolio/portfolio.md
+      run: cabal run exes -- inputs.file-path
