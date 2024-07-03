@@ -45,7 +45,7 @@ jobs:
           name: markdown-output
           path: markdown-output
       - name: Prepare Output directory
-        run: cat markdown-output/*.html > index.html
+        run: cat markdown-output/*.html > markdown-output/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
