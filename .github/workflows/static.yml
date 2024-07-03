@@ -44,10 +44,12 @@ jobs:
         with:
           name: markdown-output
           path: markdown-output
+      - name: Prepare Output directory
+        run: cp index.html markdown-output/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'markdown-output/portfolio.html'
+          path: 'markdown-output/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
