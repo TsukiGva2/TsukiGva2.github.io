@@ -1,8 +1,9 @@
 # Rodrigo Monteiro Junior
 ### Desenvolvedor Junior
-<hr/>
+---
 
 ## Habilidades:
+---
 
 - C/C++
 
@@ -30,6 +31,7 @@ Forth.
 - Criatividade e vontade de aprender.
 
 ## Background:
+---
 
 - Tecnico em Informatica na instituicao de ensino CEEMTI PROF
 FERNANDO DUARTE RABELO - Vitoria ES
